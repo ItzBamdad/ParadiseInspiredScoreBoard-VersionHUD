@@ -2,6 +2,10 @@
 -- ReCoded By: ItzBamdad
 Config = {}
 
+-- کلید باز کردن اسکوربورد (F9, F10, HOME, ... هر کلید استاندارد GTA) | Key To Open Scoreboard
+Config.ScoreboardKey = 'F10'
+-- دستور باز کردن اسکوربرد | Scoreboard Opening Command
+Config.ScoreboardCommand = 'scoreboard'
 
 -- تنظیمات نیرو های امنیتی مورد نیاز برای هر رابری | Robbery Icon Settings: Jobs Required
 Config.Robs = {
