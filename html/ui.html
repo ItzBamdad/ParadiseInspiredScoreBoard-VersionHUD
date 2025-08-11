@@ -1,0 +1,159 @@
+<!-- Ui BY: Mini Sara -->
+<!-- ReCoded By: ItzBamdad -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="./style.css">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--	<link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro-v6/18657a9/css/all.min.css" rel="stylesheet" type="text/css"/> -->
+		
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' crossorigin='anonymous' />
+		<!--<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@18657a9/css/all.min.css" rel="stylesheet" type="text/css" />-->
+	
+		<!-- /*flex-direction: column;*/<script src="app.js"></script>-->
+	</head>
+	<body> <!-- background:#e8e3e8; -->
+		<img style="z-index: 10000;" src = "myLogo.png"></img>
+		<div style="z-index: 10000;" class="title">
+			<p><span>(V:6.0.0)&nbsp;&nbsp;</span>پارادایس رول پلی</p>
+		</div>
+		
+		<div id="container">
+			<!-- linear-gradient(rgba(39, 86, 80,1), rgba(45, 69, 83,0.8)); -->
+			<ul class="first-row">
+				<li><p style="font-family: oswald;"> <i class="fa fa-syringe"></i>&nbsp;<span id="ems">0</span></p></li>
+				<li><p style="font-family: oswald;"> <i class="fa fa-shield"></i>&nbsp; <span id="police">0</span></p></li>
+				<li><p style="font-family: oswald;"> <i class="fa fa-wrench"></i>&nbsp; <span id="mechanic">0</span></p></li>
+				<li><p style="font-family: oswald;"> <i class="fa fa-car" style="font-size: 15px;"></i>&nbsp; <span id="taxi">0</span></p></li>
+			</ul>
+			<div class="line"></div>
+			<table>
+				<tr class="second-row row">  
+					<td id="vehiclerob" ><i class="fa fa-car-side"></i></td>
+					<td id="shop" ><i class="fa fa-bag-shopping"></i></td>
+					<td id="karaj" ><i class="fa fa-cart-shopping"></i></td>
+					<td id="cartel" ><i class="fa fa-truck"></i></td>
+				</tr>
+				<tr class="third-row row">  
+					<td id="chicken" ><i class="fa fa-egg"></i></td>  
+				<!--<td id="javaheriFarm" ><i class="fa fa-gem" style="font-size: 14px;"></i></td>  -->
+					<td id="javaheriPaleto" ><i class="fa fa-gem" style="font-size: 15px;"></i></td>
+					<td id="miniBank" ><i class="fa fa-dollar"></i></td>  
+					<td id="javaheri" ><i class="fa fa-gem"></i></td>
+				</tr> 
+				<tr class="fourth-row row">
+					<td id="yatch" ><i class="fa fa-ship"></i></td>
+					<td id="jr" ><i class="fa fa-house"></i></td>
+					<td id="farm" ><i class="fa fa-tractor"></i></td>
+				<!--<td id="humanlab" ><i class="fa fa-flask"></i></td>-->
+					<td id="merryweather" ><i class="fa fa-cloud-sun"></i></td>
+                <!--<td id="vu" ><i class="fa fa-heart"></i></td>-->
+				</tr>
+				<tr class="second-row row">  
+					<td id="shop_ru" ><i class="fa fa-cash-register"><span style="font-size: 11px;">&nbsp;&nbsp;ru</span></i></td> 
+					<td id="shop_fr" ><i class="fa fa-cash-register"><span style="font-size: 11px;">&nbsp;&nbsp;fr</span></i></td> 
+					<td id="shop_tw" ><i class="fa fa-cash-register"><span style="font-size: 11px;">&nbsp;&nbsp;jp</span></i></td> 
+					<td id="shop_co" ><i class="fa fa-cash-register"><span style="font-size: 11px;">&nbsp;&nbsp;co</span></i></td> 
+				</tr>
+			</table>  
+    </div>
+		<div id="players" class="players-holder">
+			<p>&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;<span id="player_count">0</span> Players &nbsp;&nbsp; &nbsp;ParadiseRP.ir</p>
+		</div>
+		
+		<script>
+			window.addEventListener('message', function(e) {
+				$("#container").stop(false, true);
+				$("#players").stop(false, true);
+				if (e.data.displayWindow == 'true') {
+					$("#container").css('display', 'flex');
+					$("#players").css('display', 'flex');
+					
+					$("#container").animate({
+						opacity: "1.0" 
+						},
+						100, function() {
+					});	
+					$("#players").animate({
+						opacity: "1.0" 
+						},
+						100, function() {
+					});	
+					
+					var element_pd = document.getElementById('police');
+					var pd = document.createTextNode(e.data._pd);
+					element_pd.innerHTML ="";
+					element_pd.appendChild(pd);
+					
+					var element_ems = document.getElementById('ems');
+					var ems = document.createTextNode(e.data._ems);
+					element_ems.innerHTML ="";
+					element_ems.appendChild(ems);
+					
+					var element_mec = document.getElementById('mechanic');
+					var mec = document.createTextNode(e.data._mec);
+					element_mec.innerHTML ="";
+					element_mec.appendChild(mec);
+					
+					var element_taxi = document.getElementById('taxi');
+					var taxi = document.createTextNode(e.data._taxi);
+					element_taxi.innerHTML ="";
+					element_taxi.appendChild(taxi);
+					
+					var element_total = document.getElementById('player_count');
+					var total = document.createTextNode(e.data._total);
+					element_total.innerHTML ="";
+					element_total.appendChild(total);
+					
+					//  $("#pacificBank").css("filter",e.data._pacificBank);
+					$("#shop").children().css("color",e.data._shop);
+					$("#vehiclerob").children().css("color",e.data._vehiclerob);
+					$("#karaj").children().css("color",e.data._karaj);
+					$("#cartel").children().css("color",e.data._cartel);
+					$("#chicken").children().css("color",e.data._chicken);
+					$("#miniBank").children().css("color",e.data._miniBank);
+					$("#javaheri").children().css("color",e.data._javaheri);
+					$("#yatch").children().css("color",e.data._yatch);
+					$("#jr").children().css("color",e.data._jr);
+					$("#farm").children().css("color",e.data._farm);
+					//$("#humanlab").children().css("color",e.data._humanlab);
+					$("#merryweather").children().css("color",e.data._merryweather);
+					//$("#vu").children().css("color",e.data._vu);
+					//$("#javaheriFarm").children().css("color",e.data._javaheriFarm);
+					$("#javaheriPaleto").children().css("color",e.data._javaheriPaleto);
+                    
+					$("#shop_ru").children().css("color",e.data._shop_ru);
+					$("#shop_fr").children().css("color",e.data._shop_fr);
+					$("#shop_tw").children().css("color",e.data._shop_tw);
+					$("#shop_co").children().css("color",e.data._shop_co);
+				} else {
+					$("#container").animate({
+						opacity: "0.0"
+						},
+						700, function() {
+							$("#container").css('display', 'none');
+							// should be removed after finishing
+							var element_pd = document.getElementById('police');
+							element_pd.innerHTML ="";
+							var element_ems = document.getElementById('ems');
+							element_ems.innerHTML ="";
+							var element_mec = document.getElementById('mechanic');	
+							element_mec.innerHTML ="";
+							var element_mec = document.getElementById('taxi');	
+							element_mec.innerHTML ="";
+							var element_total = document.getElementById('player_count');
+							element_total.innerHTML ="";
+							
+					});
+					$('#players').animate({
+						opacity: "0.0"
+						}, 700, function() {
+							$('#players').css('display', 'none');		
+						}
+					);
+				}
+			});
+			</script>
+	</body>
+</html>

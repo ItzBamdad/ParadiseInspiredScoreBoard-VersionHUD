@@ -1,0 +1,5 @@
+برای تعویض لوگو، فایل
+myLogo.png
+را با لوگوی خود با ابعاد 96 در 96 پیکسل جایگزین کنید.
+
+To Change The Logo, Replace myLogo.png With Your Logo, Resolution: 96x96 Pixel 

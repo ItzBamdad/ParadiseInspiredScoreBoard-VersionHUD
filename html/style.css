@@ -1,0 +1,196 @@
+/* Ui BY: Mini Sara
+ReCoded By: ItzBamdad */
+@font-face {
+    font-family: 'dana';
+    src: url('DANA-DEMIBOLD.TTF') format('truetype'); 
+} 
+
+@font-face {
+    font-family: 'oswald';
+    src: url('GILROY-BOLD.TTF') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
+
+* {
+    box-sizing: border-box;
+    font-family: 'dana';
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    /*height: 1080px;
+    width: 100%;*/
+}
+
+#container {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    /*left:35px;*/
+    left:27px;
+    top: 8%;
+    padding: 5px 14px 15px 15px;
+    /*border-color: white;				
+    border: 1px solid white;*/
+    border-radius: 10px;
+    text-align: center;
+	background: #080808e9;
+	-webkit-box-shadow: 10px 9px 42px -5px #0f0f1790;
+	-moz-box-shadow: 10px 9px 42px -5px #0f0f1790;
+	box-shadow: 10px 9px 42px -5px #0f0f1790;
+    width: 277px;
+    border: 1.0px solid #faa5171f;
+	border-radius: 10px;
+}
+
+
+img {
+    float:right; 
+    margin-right:20px; 
+    margin-top:38px; 
+    max-width:30px;
+}
+
+.title {
+    float: right; 
+    text-shadow: 0px 0 black, 0 1px black, 0px 0 black, 0 -1px black; 
+    color:white; 
+    top:1px; 
+    font-size: 18px; 
+    margin-right: 10px !important; 
+    margin-top: 40px !important;
+}
+
+.title span {
+    top: 3px !important; 
+    font-size: 12px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 5px 0 5px 0;
+}
+
+
+ul {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    overflow: hidden;
+}
+
+i {
+    margin-left: 16px;
+    font-size: 18px;
+    color: #ffffff;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.9));
+}
+
+table {
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+.first-row {
+    margin: 20px 0 0 0;
+}
+
+.first-row p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.first-row i {
+    font-size: 17px;
+}
+
+/* Icon Colors */
+.fa-syringe {
+    color: #FF0000;
+   /* filter: drop-shadow(0 0 4px rgba(255, 0, 8,0.4))
+    drop-shadow(0 0 5px rgba(255, 0, 8,0.4))
+    drop-shadow(0 1px 7px rgba(255, 0, 8,0.3));*/
+}
+
+.fa-shield {
+    color: #34B1EB;
+   /* filter: drop-shadow(0 0 3px rgba(0, 213, 255, 0.4))
+    drop-shadow(0 0 4px rgba(0, 213, 255,0.3))
+    drop-shadow(0 1px 6px rgba(0, 213, 255,0.3));*/
+}
+
+.fa-wrench {
+    color: #9774B5;
+   /* filter: drop-shadow(0 0 1px rgba(216, 222, 233, 0.4))
+    drop-shadow(0 0 4px rgba(129, 134, 142, 0.3))
+    drop-shadow(0 2px 5px rgba(216, 222, 233, 0.3));*/
+}
+
+.fa-car{
+    color: #E8E813;
+   /* filter: drop-shadow(0 0 1px rgba(216, 222, 233, 0.4))
+    drop-shadow(0 0 4px rgba(129, 134, 142, 0.3))
+    drop-shadow(0 2px 5px rgba(216, 222, 233, 0.3));*/
+}
+
+
+.fa-bag-shopping {
+    font-size: 18px;
+}
+.fa-cash-register {
+    font-size: 17px;
+}
+
+tr  {
+    height: 50px;
+}
+
+td {
+    text-align: center;
+    width: 60px; /* 47.5 vase 5 ta*/
+}
+
+.players-holder {
+    display: none;
+    position: absolute;
+    width: 277px;
+    height: 55px;
+    top: 36%; /*32  -  36.5*/
+    left:27px;
+    border-radius: 10px;
+    text-align: center;
+	background: #080808e9;
+	-webkit-box-shadow: 10px 9px 42px -5px #0f0f1790;
+	-moz-box-shadow: 10px 9px 42px -5px #0f0f1790;
+	box-shadow: 10px 9px 42px -5px #0f0f1790;
+    border: 1.0px solid #faa5171f;
+	border-radius: 10px;
+}
+
+.players-holder i{
+	
+    font-size: 16px;
+    margin: 0 0 0 -1px;
+    color: #fff;
+    align-items: center;
+}
+
+.players-holder P {
+	font-size: 14px;
+    align-items: center;
+    margin: 18px auto;
+    color:#fff; 
+    font-family: oswald; 
+    letter-spacing: 1px;
+}
+
+
